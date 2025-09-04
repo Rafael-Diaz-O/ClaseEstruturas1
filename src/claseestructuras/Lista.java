@@ -96,9 +96,9 @@ public class Lista {
              
          }
          
-         Nodo aux = nodoRecorre.siguiente; // nodo a eliminar
-         nodoRecorre.siguiente = aux.siguiente;
-         aux.siguiente = null; //romper el enlace 
+         Nodo aux = nodoRecorre.siguiente; // nodo a eliminar, creamos una copia del nodo 
+         nodoRecorre.siguiente = aux.siguiente;// saltamos al otro nodo que queremos que se balla 
+         aux.siguiente = null; //romper el enlace , eliminamos el nodo
          
          tamano--;
      }
