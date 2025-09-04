@@ -64,13 +64,24 @@ public class Lista {
          inicio.siguiente = null; //romper el enlace
          tamano--;
      }
+
+    public int getTamano() {
+        return tamano;
+    }
+     
      
      public void eliminarNodoFinal(){
-         Nodo ultimo = cabeza;
-         cabeza = ultimo.siguiente;
-         ultimo.siguiente != null;
+         if (cabeza.siguiente == null){
+         cabeza=null;
+     }else{
+             Nodo nodoRecorre = cabeza;
+             
+             while(nodoRecorre.siguiente.siguiente != null){
+                 nodoRecorre = nodoRecorre.siguiente;
+             }
+             nodoRecorre.siguiente = null;
+         }
          tamano--;
-         
      }
 
     
