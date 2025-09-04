@@ -12,10 +12,12 @@ public class ListaEnlazada {
         lista.insertarNodoFinal(4);
         lista.insertarNodoFinal(5);
         lista.insertarNodoInicio(8);
-        lista.insertarNodoIndice(13, 5);
+        lista.insertarNodoIndice(13, 3);
         lista.imprimirLista();
         lista.eliminarNodoFinal(); 
+        lista.eliminarIndice(1);
         lista.imprimirLista();
+       
         // si ingreso mas datos sea desde la cabeza o de la cola estos datos ya existentes se moveran al centro.
        
     }
