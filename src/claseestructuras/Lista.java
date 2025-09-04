@@ -4,9 +4,12 @@ package claseestructuras;
 public class Lista {
     
     private Nodo cabeza; 
+    private int tamano;
     
     public Lista(){
         this.cabeza= null; 
+        this.tamano= 0; 
+         
     }
     
      public void insertarNodoInicio(int dato){
@@ -49,6 +52,13 @@ public class Lista {
              nodoRecorre = nodoRecorre.siguiente;
          }
          System.out.println("NULL");
+     }
+     
+     public void eliminarNodoInicio(){
+         Nodo inicio = cabeza; 
+         cabeza = inicio.siguiente;
+         inicio.siguiente = null; //romper el enlace
+         tamano--;
      }
 
     
