@@ -16,6 +16,7 @@ public class Lista {
         Nodo nodoIni = new Nodo(dato);
         nodoIni.siguiente = cabeza; 
         cabeza = nodoIni; 
+        tamano++;
     }
      
      public void insertarNodoFinal(int dato){
@@ -27,6 +28,7 @@ public class Lista {
          }
          
          nodoRecorre.siguiente = nodoFin;
+         tamano++;
      }
      
      public void insertarNodoIndice(int dato,int posicion ){ // insear nodo en un indice 
@@ -42,6 +44,7 @@ public class Lista {
          if(cont == (posicion-1)){
          nodoIndice.siguiente = nodoRecorre.siguiente;
          nodoRecorre.siguiente = nodoIndice;
+         tamano++;
          }
 }
      public void imprimirLista(){
@@ -54,6 +57,7 @@ public class Lista {
          System.out.println("NULL");
      }
      
+     //Ahorrar memoria borrando las copaias hechas 
      public void eliminarNodoInicio(){
          Nodo inicio = cabeza; 
          cabeza = inicio.siguiente;
