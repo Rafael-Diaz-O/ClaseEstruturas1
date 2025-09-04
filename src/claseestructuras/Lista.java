@@ -64,6 +64,14 @@ public class Lista {
          inicio.siguiente = null; //romper el enlace
          tamano--;
      }
+     
+     public void eliminarNodoFinal(){
+         Nodo ultimo = cabeza;
+         cabeza = ultimo.siguiente;
+         ultimo.siguiente != null;
+         tamano--;
+         
+     }
 
     
 }
