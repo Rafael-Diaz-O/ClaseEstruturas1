@@ -79,8 +79,27 @@ public class Lista {
              while(nodoRecorre.siguiente.siguiente != null){
                  nodoRecorre = nodoRecorre.siguiente;
              }
-             nodoRecorre.siguiente = null;
+             nodoRecorre.siguiente = null; // se elimina el nodo 
          }
+         tamano--;
+     }
+     
+     public void eliminarIndice(int posicion){
+         
+         
+         Nodo nodoRecorre = cabeza;
+         
+         int cont = 0;
+         while (cont <(posicion-1) && nodoRecorre.siguiente != null){
+             nodoRecorre = nodoRecorre.siguiente; 
+             cont ++;
+             
+         }
+         
+         Nodo aux = nodoRecorre.siguiente; // nodo a eliminar
+         nodoRecorre.siguiente = aux.siguiente;
+         aux.siguiente = null; //romper el enlace 
+         
          tamano--;
      }
 
