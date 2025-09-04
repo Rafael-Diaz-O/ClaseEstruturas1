@@ -1,7 +1,7 @@
 
 package claseestructuras;
 
-
+//lista enlazada simple 
 public class ListaEnlazada {
 
     public static void main(String[] args) {
