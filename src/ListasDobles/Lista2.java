@@ -5,14 +5,53 @@ package ListasDobles;
 public class Lista2 {
     
     private Nodo2 cabeza,cola;
+    private int tamaño;
     
     public Lista2(){
         this.cabeza = cabeza;
         this.cola = cola; 
     }
+
+    public int getTamaño() {
+        return tamaño;
+    }
+
+    public void listaVacia(){
+        if(cabeza == null){
+            System.out.println("La lista se encuentra vacia");
+        }else{
+            System.out.println("La lista esta llena");
+        }
+    }
     
-    // metodo verificacion de lista vacia 
-    // get tamaño 
+    public void     imprimirListaIniAFin(){
+        Nodo2 nodoRecorre = cabeza;
+        
+        System.out.println("cabeza ->");
+        while (nodoRecorre != null){
+            System.out.println(nodoRecorre.dato + "->");
+            nodoRecorre = nodoRecorre.siguiente; 
+        }
+        
+        System.out.println("FINAL");
+        
+                
+          
+    }
+    
+    public void     imprimirListaFinAInicio(){
+        Nodo2 nodoRecorre = cola;
+        
+        System.out.println("fINAL>");
+        while (nodoRecorre != null){
+            System.out.println(nodoRecorre.dato + "->");
+            nodoRecorre = nodoRecorre.anterior; 
+        }
+        
+        System.out.println("INICIAL");
+                
+          
+    }
     
     
     
