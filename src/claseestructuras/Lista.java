@@ -124,6 +124,23 @@ public class Lista {
          }
      }
          
+     public void buscadorDeValore(int valor){
+         
+//        boolean vrificador = false;
+         Nodo recorre = cabeza;
+//        int cont = 0;
+       
+          while (recorre != null){
+            if(recorre.dato == valor ){
+                System.out.println("Si hay un numero en la lista");
+                break;
+            }else{
+            recorre = recorre.siguiente;}
+           
+        
+       }
+     }
+             
 }
      
     
