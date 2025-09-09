@@ -118,6 +118,7 @@ public class Lista {
              while(cont< indice){
                  recorre = recorre.siguiente; // recorre la lista
                  cont ++;
+                 break;
              }
              System.out.println("El dato que se encuentra en el indice " + indice + " es: " + recorre.dato);
             
@@ -125,17 +126,19 @@ public class Lista {
      }
          
      public void buscadorDeValore(int valor){
-         
+         // implementar en que posicion se encuentra ese valor terminar para la casa 
 //        boolean vrificador = false;
          Nodo recorre = cabeza;
-//        int cont = 0;
+         int cont = 0;
        
           while (recorre != null){
             if(recorre.dato == valor ){
-                System.out.println("Si hay un numero en la lista");
+                System.out.println("Si hay un numero en la lista"+ "El dato es: " + recorre.dato + "posicion");
                 break;
             }else{
             recorre = recorre.siguiente;}
+            cont ++;
+            break;
            
         
        }
