@@ -103,5 +103,27 @@ public class Lista {
          tamano--;
      }
 
-    
+     public void buscador(int indice){
+        
+         if(indice == 0 || indice >= tamano){
+             System.out.println("Eror al ingresar datos");
+             return;
+         }
+         
+         if(indice == 0){
+             System.out.println("En el inidce 0 o el primer nodo se encuentra el dato" + cabeza.dato);
+             }else{
+             int cont =0;
+             Nodo recorre = cabeza;
+             while(cont< indice){
+                 recorre = recorre.siguiente; // recorre la lista
+                 cont ++;
+             }
+             System.out.println("El dato que se encuentra en el indice " + indice + " es: " + recorre.dato);
+            
+         }
+     }
+         
 }
+     
+    
