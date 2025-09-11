@@ -2,6 +2,8 @@
 package ListasDobles;
 
 
+
+
 public class Lista2 {
     
     private Nodo2 cabeza,cola;
@@ -88,7 +90,45 @@ public class Lista2 {
     }
     
     
+    public void insertarNodoInidce(int dato,int posicion){
+        
+        Nodo2 nuevo = new Nodo2 (dato);
+        Nodo2 recorre;
+        
+        if(cabeza == null && posicion != 0 ){
+            
+            System.out.println("Posicion no existe");
+        }else if(cola == null && posicion == 0){
+            cabeza = nuevo; 
+            cola = nuevo;
+        }else{
+            recorre = cabeza;
+            int cont = 0;
+            
+             while (cont < posicion-1 && recorre.siguiente != null){
+                 recorre = recorre.siguiente;
+                 cont++;
+             }
+            
+             if(cont == posicion-1){
+            nuevo.siguiente = recorre.siguiente;
+            nuevo.anterior = recorre;
+            
+            recorre.siguiente.anterior = nuevo;
+            recorre.siguiente = nuevo;
+            
+        }else{
+                 System.out.println("Posicion no existe ");
+             }
+             
+            
+             
+        }
+        
+        
+        
+        
+    }
     
-    
-    
+    tamaño++;
 }
