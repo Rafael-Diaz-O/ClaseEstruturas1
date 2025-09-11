@@ -70,7 +70,22 @@ public class Lista2 {
             
     }
     
-    
+    public void insetarNodoFin(int dato){
+        
+        Nodo2 nuevo = new Nodo2(dato);
+                
+        if(cola == null){
+            cabeza = nuevo;
+        }else{
+        cola.siguiente = nuevo;
+        nuevo.anterior = cola;
+      }
+        
+      cola = nuevo;
+      tamaño++;
+        
+        
+    }
     
     
     
