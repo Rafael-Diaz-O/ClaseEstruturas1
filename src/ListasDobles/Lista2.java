@@ -1,7 +1,7 @@
 
 package ListasDobles;
 
-
+//eeeo
 public class Lista2 {
     
     private Nodo2 cabeza,cola;
