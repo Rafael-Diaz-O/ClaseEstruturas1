@@ -1,7 +1,7 @@
 
 package ListasDobles;
 
-//eeeo
+
 public class Lista2 {
     
     private Nodo2 cabeza,cola;
@@ -52,6 +52,27 @@ public class Lista2 {
                 
           
     }
+    
+    public void insertarNodoInicio(int dato){
+        Nodo2 nuevo = new Nodo2(dato);
+        
+        if(cabeza  == null){
+            cola = nuevo;
+        }else{
+            cabeza.anterior = nuevo;
+        }
+        
+        nuevo.siguiente = cabeza;
+        nuevo.anterior = null;
+        
+        cabeza = nuevo;
+        tamaño++;
+            
+    }
+    
+    
+    
+    
     
     
     
