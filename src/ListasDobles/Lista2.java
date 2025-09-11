@@ -126,9 +126,9 @@ public class Lista2 {
         }
         
         
-        
+        tamaño++;
         
     }
     
-    tamaño++;
+    
 }
