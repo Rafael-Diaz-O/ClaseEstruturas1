@@ -160,4 +160,37 @@ public class Lista2 {
 
     
     }
+    
+    public void eliminarNodoIndice(int posicion){
+        
+        Nodo2 recorre;
+        
+        if(cabeza == null){
+            System.out.println("Nada por eliminar ");
+        }else if(cabeza == cola){
+            cola = null;
+            cabeza = null;
+        }else{
+            recorre = cabeza;
+            int cont = 0;
+            
+            while ( cont < posicion && recorre.siguiente != null){
+                recorre = recorre.siguiente;
+                cont++;
+            }
+       
+        
+          if(cont == posicion){
+              recorre.siguiente = recorre.siguiente.siguiente; //llego al nodo que quieor enlazar por quejemplo tengo lista de tamaño 1,2,3 entonces con esto paso se 1 a 3 
+              recorre.siguiente.anterior = recorre;// con esto me devuelvo de 3 a 1 relamente cuando dices me devuelo es que los estas en lazando asiendo haci que el nodo sea eliminado 
+              tamaño--;
+            
+            }else{
+              System.out.println("Posicion no existente");
+          }
+ 
+        
+           }
+    
+    }
 }
