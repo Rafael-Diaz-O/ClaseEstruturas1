@@ -193,4 +193,48 @@ public class Lista2 {
            }
     
     }
+    
+    public void buscadorPorIndice(int indice){
+        
+         if(indice == 0 || indice >= tamaño){
+             System.out.println("Eror al ingresar datos");
+             return;
+         }
+         
+         if(indice == 0){
+             System.out.println("En el inidce 0 o el primer nodo se encuentra el dato" + cabeza.dato);
+             }else{
+             int cont =0;
+             Nodo2 recorre = cabeza;
+             while(cont< indice){
+                 recorre = recorre.siguiente; // recorre la lista
+                 cont ++;
+                 break;
+             }
+             System.out.println("El dato que se encuentra en el indice " + indice + " es: " + recorre.dato);
+            
+         }
+     }
+         
+     public void buscadorDeValore(int valor){
+         // implementar en que posicion se encuentra ese valor terminar para la casa 
+//        boolean vrificador = false;
+         Nodo2 recorre = cabeza;
+         int cont = 0;
+       
+          while (recorre != null){
+            if(recorre.dato == valor ){
+                System.out.println("Si hay un numero en la lista"+ "El dato es: " + recorre.dato + "posicion");
+                break;
+            }else{
+            recorre = recorre.siguiente;}
+            cont ++;
+            break;
+           
+        
+       }
+     }
+    
 }
+
+ 
