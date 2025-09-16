@@ -26,7 +26,7 @@ public class ListasDobles {
         lista.imprimirListaIniAFin();
         System.out.println("tamaño" + lista.getTamaño());
         
-        lista.eliminarNodoIndice(6, 1);
+        
         System.out.println("Dato eliminado");
         lista.imprimirListaIniAFin();
         lista.imprimirListaFinAInicio();
