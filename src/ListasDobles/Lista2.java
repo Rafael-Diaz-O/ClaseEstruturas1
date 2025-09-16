@@ -3,7 +3,6 @@ package ListasDobles;
 
 
 
-
 public class Lista2 {
     
     private Nodo2 cabeza,cola;
@@ -130,5 +129,35 @@ public class Lista2 {
         
     }
     
+    public void eliminarNodoInicio(){
+        
+        if(cabeza == null){
+            System.out.println("Nada por eliminar");
+        }else if(cabeza == cola){
+            cola =null;
+            cabeza =null; 
+        }else{
+            cabeza = cabeza.siguiente;
+            cabeza.anterior = null;
+            tamaño--;
+        }
+         
+     }
     
+    
+    public void eliminarNodoFinal(){
+         if (cabeza== null){
+             System.out.println("Nada por eliminar");
+     }else if(cabeza == cola ){
+             cola = null;
+             cabeza = null;
+             tamaño --;
+    }else {
+         cola = cola.anterior;
+         cola.siguiente = null;
+         tamaño--;
+     }
+
+    
+    }
 }
