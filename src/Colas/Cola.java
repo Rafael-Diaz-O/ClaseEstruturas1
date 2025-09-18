@@ -41,7 +41,22 @@ public class Cola {
     }
     
     
+     public boolean isEmpty ()  {
+        if(fin == null){
+            System.out.println("La cola esta vacia ");
+            return true;
+        }
+        else {
+            System.out.println("La cola no esta vacia ");
+            return false;
+        }
+    }    
     
+    public void eliminar(){
+        while(!isEmpty()){
+            dequeue();
+        }
+    }
     
     
 }
