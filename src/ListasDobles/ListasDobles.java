@@ -31,7 +31,7 @@ public class ListasDobles {
         lista.imprimirListaIniAFin();
         lista.imprimirListaFinAInicio();
         
-        //hola
+   
         
     }
     
