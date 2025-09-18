@@ -59,4 +59,12 @@ public class Cola {
     }
     
     
+    public int peek(){
+      
+        System.out.println("La cola es " + fin.dato);
+        return fin.dato;
+        
+    }
+    
+    
 }
