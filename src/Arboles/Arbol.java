@@ -30,4 +30,23 @@ public class Arbol {
         }
     }
     
+    //Estudiar el metodo de agregar de manera secuencial 
+    public void insertarDatos(int dato){
+        Nodo nuevo = new Nodo(dato);
+        Nodo recorre = raiz;
+        
+        while(recorre != null){
+        if(estaVacio()){ // solo se puede usar el metodo que usa logica booleana
+            System.out.println("Esta vacio");
+        }else if(raiz.dato < nuevo.dato){  // con .dato estaria comparando ahora si los dos datos
+            recorre = nuevo.hijoIzquierdo;
+        }else {
+            recorre = nuevo.hijoDerecho;
+        }
+        }
+        
+        
+        
+    }
+    
 }
