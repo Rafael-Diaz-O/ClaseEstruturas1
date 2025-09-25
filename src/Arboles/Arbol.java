@@ -53,6 +53,9 @@ public class Arbol {
     public void meterDato(int dato){
         
         Nodo nuevo = new Nodo(dato);
+        if(estaVacio()){
+        this.raiz = nuevo;
+        }
         //insertar en el lado izquierdo
         if (dato < nuevo.dato){
             
@@ -70,10 +73,6 @@ public class Arbol {
             }
         }
         
-//        
-//        if(dato < raiz.dato){ 
-//            se podria trabajr con raiz? en vez de crear un nodo dentro del metodo
-//        }
     }
     
     
@@ -81,12 +80,18 @@ public class Arbol {
 
     public void ingresarDato(int dato){
         
-        Nodo actual = raiz;
+         Nodo nuevo = new Nodo(dato);
+        if(estaVacio()){
+        this.raiz = nuevo;
+        }
         
+        Nodo actual = raiz;
+       
         while(dato < actual.dato){ // preguntar si esto podria dar un bucle infinito
             
-        if(raiz.hijoDerecho == null){
-            raiz.hijoIzquierdo = new Nodo(dato);
+        if(actual.hijoDerecho == null){
+            actual.hijoIzquierdo = new Nodo(dato);
+            raiz = nuevo;
             break;
         }else{
             actual = actual.hijoIzquierdo;
