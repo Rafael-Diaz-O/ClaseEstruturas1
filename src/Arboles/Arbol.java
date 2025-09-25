@@ -76,4 +76,41 @@ public class Arbol {
 //        }
     }
     
+    
+     // metodo de forma secuencial 
+
+    public void ingresarDato(int dato){
+        
+        Nodo actual = raiz;
+        
+        while(dato < actual.dato){ // preguntar si esto podria dar un bucle infinito
+            
+        if(raiz.hijoDerecho == null){
+            raiz.hijoIzquierdo = new Nodo(dato);
+            break;
+        }else{
+            actual = actual.hijoIzquierdo;
+        }
+
+        }
+        
+        while (dato > actual.dato){
+            if(raiz.hijoDerecho == null){
+                raiz.hijoDerecho = new Nodo(dato);
+                break;
+            }else{
+                actual = actual.hijoDerecho;
+            }
+        }
+        
 }
+    
+    
+    
+    
+    
+    
+    
+    
+}
+
