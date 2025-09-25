@@ -55,22 +55,32 @@ public class Arbol {
         Nodo nuevo = new Nodo(dato);
         if(estaVacio()){
         this.raiz = nuevo;
-        }
-        //insertar en el lado izquierdo
-        if (dato < nuevo.dato){
+        }else{
             
+            Nodo actual = raiz;
+            Nodo padre; 
+            
+            //insertar en el lado izquierdo
+        if (dato < nuevo.dato){
+            padre = actual;
             if(nuevo.hijoIzquierdo == null){
-                nuevo.hijoIzquierdo = new Nodo(dato);
+                padre.hijoIzquierdo = new Nodo(dato);
             }else{
                 meterDato(dato);
             }
             
         }else{ // insertar en el lado derecho
+            padre = actual;
             if(nuevo.hijoDerecho ==  null){
-                nuevo.hijoDerecho =  new Nodo(dato);
+                padre.hijoDerecho =  new Nodo(dato);
             }else{
                 meterDato(dato);
             }
+        }
+        
+            
+            
+            
         }
         
     }
@@ -86,12 +96,11 @@ public class Arbol {
         }else{
             
             Nodo actual = raiz;
-            Nodo padre;
-           
+            Nodo padre; 
             
             while(dato < actual.dato){ // preguntar si esto podria dar un bucle infinito
           
-             padre = actual;
+             padre = actual;//lo que hago es actualzar el padre  de esa subrais 
                  
         if(actual.hijoIzquierdo == null){
            padre.hijoIzquierdo = nuevo;
@@ -116,11 +125,14 @@ public class Arbol {
         
             
         }
+        
+        
+        
          
 }
     
     
-    
+    //tarea hacer el codig recursivo de la profe que esta en las diapos 
     
     
     
