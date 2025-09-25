@@ -49,4 +49,31 @@ public class Arbol {
         
     }
     
+    //Metodo recursivo
+    public void meterDato(int dato){
+        
+        Nodo nuevo = new Nodo(dato);
+        //insertar en el lado izquierdo
+        if (dato < nuevo.dato){
+            
+            if(nuevo.hijoIzquierdo == null){
+                nuevo.hijoIzquierdo = new Nodo(dato);
+            }else{
+                meterDato(dato);
+            }
+            
+        }else{ // insertar en el lado derecho
+            if(nuevo.hijoDerecho ==  null){
+                nuevo.hijoDerecho =  new Nodo(dato);
+            }else{
+                meterDato(dato);
+            }
+        }
+        
+//        
+//        if(dato < raiz.dato){ 
+//            se podria trabajr con raiz? en vez de crear un nodo dentro del metodo
+//        }
+    }
+    
 }
