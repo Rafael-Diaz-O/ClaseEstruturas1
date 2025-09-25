@@ -83,31 +83,40 @@ public class Arbol {
          Nodo nuevo = new Nodo(dato);
         if(estaVacio()){
         this.raiz = nuevo;
-        }
-        
-        Nodo actual = raiz;
-       
-        while(dato < actual.dato){ // preguntar si esto podria dar un bucle infinito
+        }else{
             
-        if(actual.hijoDerecho == null){
-            actual.hijoIzquierdo = new Nodo(dato);
-            raiz = nuevo;
+            Nodo actual = raiz;
+            Nodo padre;
+           
+            
+            while(dato < actual.dato){ // preguntar si esto podria dar un bucle infinito
+          
+             padre = actual;
+                 
+        if(actual.hijoIzquierdo == null){
+           padre.hijoIzquierdo = nuevo;
+          
             break;
         }else{
+            
             actual = actual.hijoIzquierdo;
         }
 
         }
         
         while (dato > actual.dato){
+            padre = actual;
             if(raiz.hijoDerecho == null){
-                raiz.hijoDerecho = new Nodo(dato);
+                padre.hijoDerecho = nuevo;
                 break;
             }else{
                 actual = actual.hijoDerecho;
             }
         }
         
+            
+        }
+         
 }
     
     
