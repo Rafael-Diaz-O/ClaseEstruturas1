@@ -1,6 +1,8 @@
 
 package Arboles;
 
+import java.util.Queue;
+import java.util.LinkedList;
 
 public class Arbol {
     
@@ -155,5 +157,34 @@ public class Arbol {
     
     
 }
+   
+   
+   public void imprimirDeFormaHorizontal(){
+       
+       if(estaVacio()){
+           System.out.println("Esta vacio");
+       }else{
+           Queue<Nodo> cola = new LinkedList<Nodo> (); // hago una cola de nodos 
+           cola.add(raiz);
+           while(cola.size() != 0){
+               
+               Nodo nodo = cola.poll();
+               
+               System.out.println("" +  nodo.dato);
+               
+               if(nodo.hijoIzquierdo != null){
+               cola.add(nodo.hijoIzquierdo);
+           }
+               if(nodo.hijoDerecho != null) {
+               cola.add(nodo.hijoDerecho);
+           }
+               
+           }
+          
+       }
+       
+       
+       
+   }
 
 }
