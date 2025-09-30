@@ -6,7 +6,7 @@ import java.util.LinkedList;
 
 public class Arbol {
     
-    private Nodo raiz;
+    protected Nodo raiz;
     private int tamaño;
     
     public Arbol(){
@@ -186,5 +186,50 @@ public class Arbol {
        
        
    }
+   
+   //imprimir de forma verical 
+   
+   public void preOrden(Nodo nodito){ // raiz, izquierda, derecha
+       
+       if(nodito != null){
+           
+           System.out.println(nodito.dato);
+           preOrden(nodito.hijoIzquierdo);// recorre hasta llegar al ltimo dato de izquierdo
+           //llego a que sea cero y me salgo de mi meotodo de hizo izquerdo y entonces saltaria ahora al de hijo derecho 
+           preOrden(nodito.hijoDerecho);// recorre hasta llegar al ultimo dato de izquierdo 
+           
+           
+       }
+   }
+   
+    public void inOrden(Nodo nodito){ //izquierda, muestra raiz , derecha
+       
+       if(nodito != null){
+           
+           
+           inOrden(nodito.hijoIzquierdo);// recorre hasta llegar al ltimo dato de izquierdo
+           //llego a que sea cero y me salgo de mi meotodo de hizo izquerdo y entonces saltaria ahora al de hijo derecho 
+           System.out.println(nodito.dato);
+           inOrden(nodito.hijoDerecho);// recorre hasta llegar al ultimo dato de izquierdo 
+           
+           
+       }
+   }
 
+    
+      public void postOrden(Nodo nodito){ //izquierda, muestra raiz , derecha
+       
+       if(nodito != null){
+           
+           
+           postOrden(nodito.hijoIzquierdo);// recorre hasta llegar al ltimo dato de izquierdo
+           //llego a que sea cero y me salgo de mi meotodo de hizo izquerdo y entonces saltaria ahora al de hijo derecho 
+           postOrden(nodito.hijoDerecho);// recorre hasta llegar al ultimo dato de izquierdo 
+           System.out.println(nodito.dato);
+           
+           
+       }
+   }
+
+    
 }
