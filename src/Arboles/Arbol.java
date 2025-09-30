@@ -131,12 +131,29 @@ public class Arbol {
          
 }
     
-    
     //tarea hacer el codig recursivo de la profe que esta en las diapos 
     
+    public void insertarArbolRecursive(int datoRecibido){
+        raiz = insertarRecusive(raiz, datoRecibido);     /// la raiz sera igual al valor que ingrese en mi metodo
+        // de tipo Nodo el metodo insertarRecusive
+        tamaño++;
+}
     
+   private Nodo insertarRecusive(Nodo raiz, int dato){
+    if (raiz == null) {
+        return new Nodo(dato);  // Caso base: crea nuevo nodo
+    }
+
+    if (dato < raiz.dato) {
+        raiz.hijoIzquierdo = insertarRecusive(raiz.hijoIzquierdo, dato);  // Inserta en la izquierda
+    } else {
+        raiz.hijoDerecho = insertarRecusive(raiz.hijoDerecho, dato);  // Inserta en la derecha
+    }
+
+    return raiz;  // Retorna el nodo actualizado
     
     
     
 }
 
+}
