@@ -17,6 +17,9 @@ public class CorreArbol {
 //    arbolito.meterDato(2);
 //    arbolito.meterDato(5);
 
+      arbolito.preOrden(arbolito.raiz);//  ingresamos el dato de tipo nodo que hara que recorra las raices de arbolito
+      arbolito.inOrden(arbolito.raiz);
+
 
 
     }
