@@ -229,7 +229,57 @@ public class Arbol {
            
            
        }
-   }
+      }
+   
+      
+      public void busqueda(int dato){ // mi metodo 
+          
+          Nodo recorre = raiz;
+        
+          
+          if(estaVacio()){
+              System.out.println("Esa vacio");
+          }
+          
+          if(dato == recorre.dato ){
+              System.out.println("El dato es: " + recorre.dato);
+          }
+              
+         while(recorre.dato !=  dato){
+                  
+         if(dato < recorre.dato){  
+            recorre = recorre.hijoIzquierdo;
+             System.out.println(recorre.dato);
+        }else {
+            recorre = recorre.hijoDerecho;
+             System.out.println(recorre.dato);
+        }
+         if(recorre == null){
+             System.out.println("null");
+         }
+        }
+        }
+      
+      
 
-    
+      public Nodo buscarNodo (int dato){ // el metodo de la profe 
+          Nodo recorre = raiz;
+          
+          while(recorre.dato != dato){
+          if(dato<recorre.dato){
+              recorre = recorre.hijoIzquierdo;
+          }else{
+              recorre = recorre.hijoDerecho;
+          }
+          if (recorre == null){
+              return null;
+          }
+      }
+          return recorre;
+      }
+      
+
+
+      
+      
 }
