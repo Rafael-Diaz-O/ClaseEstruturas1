@@ -22,7 +22,7 @@ public class CorreArbol {
       //arbolito.inOrden(arbolito.raiz);
 
       
-      arbolito.busqueda(1);
+//      arbolito.busqueda(1);
 
       
       
