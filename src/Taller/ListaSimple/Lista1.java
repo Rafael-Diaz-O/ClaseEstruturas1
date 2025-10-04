@@ -1,12 +1,14 @@
-package claseestructuras;
+package Taller.ListaSimple;
+
+import claseestructuras.*;
 
 
-public class Lista {
+public class Lista1 {
     
     private Nodo cabeza; 
     private int tamano;
     
-    public Lista(){
+    public Lista1(){
         this.cabeza= null; 
         this.tamano= 0; 
          
@@ -142,6 +144,28 @@ public class Lista {
            
         
        }
+     }
+     
+     public void eliminarDuplicados(){
+         
+         //Nota pendiente explicar mi codigo conceptual mente.
+         
+         Nodo recorre = cabeza;
+      
+         //se ejecuta si el nodo no esta basio y el siguiente tampoco esta basio
+         while(recorre != null && recorre.siguiente != null){
+             //si el dato de ese nodo es igual al del siguiente 
+             if(recorre.dato ==  recorre.siguiente.dato){
+                 
+                 Nodo aux = recorre.siguiente;// nodo a eliminar, creamos una copia del nodo
+                 recorre.siguiente = aux.siguiente;// saltamos al otro nodo que queremos que se balla 
+                 aux.siguiente = null;//romper el enlace , eliminamos el nodo
+                 tamano--;
+                 
+             }else {
+                 recorre = recorre.siguiente; // salta al siguiente nodo
+             }
+         }
      }
              
 }

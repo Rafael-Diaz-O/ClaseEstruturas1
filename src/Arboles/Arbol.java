@@ -279,59 +279,58 @@ public class Arbol {
       }
       
 
-      public void eliminarNodo(int dato, Nodo raiz){
-          //1. si el nodo basio 
-          
-          
-          
-           Nodo recorre = raiz;
-          
-          while(recorre.dato != dato){
-          if(dato<recorre.dato){
-              recorre = recorre.hijoIzquierdo;
-          }else{
-              recorre = recorre.hijoDerecho;
-          }
-          if (recorre == null){
-              return null;
-          }
-      }
-          return recorre;
-      }
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-       
-          
-          
-          
-        Nodo eliminar = buscarNodo(dato);
-          
-          if(estaVacio()){
-              System.out.println("El arbol eta vacio ");
-          }else if (eliminar.dato == dato  ){
-              if(eliminar.hijoIzquierdo == null){
-                  eliminar = null; 
-                  
-                  
-              }
-          }
-          
-         
+//      public void eliminarNodo(int dato, Nodo raiz){
+//          //1. si el nodo basio 
+//          
+//          
+//          
+//           Nodo recorre = raiz;
+//          
+//          while(recorre.dato != dato){
+//          if(dato<recorre.dato){
+//              recorre = recorre.hijoIzquierdo;
+//          }else{
+//              recorre = recorre.hijoDerecho;
+//          }
+//          if (recorre == null){
+//              return null;
+//          }
+//      }
+//          return recorre;
+//      }
+//          
+//          
+//          
+//          
+//          
+//          
+//          
+//          
+//          
+//          
+//          
+//          
+//          
+//       
+//          
+//          
+//          
+//        Nodo eliminar = buscarNodo(dato);
+//          
+//          if(estaVacio()){
+//              System.out.println("El arbol eta vacio ");
+//          }else if (eliminar.dato == dato  ){
+//              if(eliminar.hijoIzquierdo == null){
+//                  eliminar = null; 
+//                  
+//                  
+//              }
+//          }
+//          
+//         
           
 
       
       
 }
       
-}
