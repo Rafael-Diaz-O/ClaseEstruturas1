@@ -329,8 +329,22 @@ public class Arbol {
 //          
 //         
           
-
-      
-      
+public void invertirArbol() {
+        raiz = invertir(raiz);
+    }
+    
+    private Nodo invertir(Nodo nodo) {
+        if (nodo == null) {
+            return null;
+        }
+        
+        Nodo temp = nodo.hijoIzquierdo;
+        nodo.hijoIzquierdo = invertir(nodo.hijoDerecho);
+        nodo.hijoDerecho = invertir(temp);
+        return nodo;
+    }
 }
+ 
+
+
       

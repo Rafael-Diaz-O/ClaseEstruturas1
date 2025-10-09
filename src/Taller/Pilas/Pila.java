@@ -1,6 +1,8 @@
 
 package Taller.Pilas;
 
+import java.util.Stack;
+
 
 public class Pila {
     
@@ -71,9 +73,46 @@ public class Pila {
             System.out.println("Null");
         
     }
+   
     
-    public void reorganizarInfo(){
+    
+    
+public void reordenadoDePalabras() {
+    Nodo dato = cima;  // Empezamos desde la cima
+    int cont = tamano;  // Número de elementos en la pila
+    
+    // Recorremos cada dato de la pila
+    while(cont != 0 && dato != null){ //Comprobamos si el nodo no esta basio 
+        //Obtener el texto del nodo actual
+        String texto = dato.dato.toString();
         
+        //Dividir en palabras
+        String[] palabras = texto.split(" ");
+        Stack<String> pila = new Stack<>();
+        
+        //Apilar palabras invertidas
+        for (String palabra : palabras) {
+            pila.push(new StringBuilder(palabra).reverse().toString());
+        }
+        
+
+
+        //Construir resultado desapilando
+        StringBuilder resultado = new StringBuilder();
+        while (!pila.isEmpty()) { //Pila tiene 1 elemento
+            resultado.append(pila.pop());// Agrega la palabra 
+            if (!pila.isEmpty()) {//Pila está VACÍA - NO ejecuta
+                resultado.append(" ");// NO se agrega espacio
+            }
+        }
+        
+        //Mostrar resultado para el nodo en el que estamos
+        System.out.println("Frase: " + resultado.toString());
+        
+        //Avanzar al siguiente nodo
+        dato = dato.siguiente;
+        //Actualizar el contador
+        cont--; 
     }
-    
+}
 }

@@ -6,10 +6,12 @@ public class Pilax {
         
         Pila platos = new Pila();
         
-        platos.push("hola");
-        platos.push("Patos");
-        platos.push("Derek");
+        platos.push("Estrutura de Datos");
+//        platos.push("Patos");
+//        platos.push("Derek");
         platos.imprimirLista();
+        platos.reordenadoDePalabras();
+        
         
     }
 }
