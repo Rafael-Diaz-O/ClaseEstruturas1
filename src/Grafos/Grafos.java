@@ -1,6 +1,10 @@
 
 package Grafos;
 
+import Arboles.Nodo;
+import java.util.LinkedList;
+import java.util.Queue;
+
 
 public class Grafos {
     
@@ -31,6 +35,30 @@ public class Grafos {
     }
     
     
+    //pensar el metodo de imprimir en anchura trabajar en este metodo
+     public void imprimirEnAnchura(){
+       
+       if(matrizAdyacencia == null){
+           System.out.println("Esta vacio");
+       }else{
+           Queue<Nodo> cola = new LinkedList<Nodo> (); // hago una cola de nodos 
+           cola.add(matrizAdyacencia);
+           while(cola.size() != 0){
+               
+               Nodo nodo = cola.poll();
+               
+               System.out.println("" +  nodo.dato);
+               
+               if(nodo.hijoIzquierdo != null){
+               cola.add(nodo.hijoIzquierdo);
+           }
+               if(nodo.hijoDerecho != null) {
+               cola.add(nodo.hijoDerecho);
+           }
+               
+           }
+          
+       }
     
     
 }
