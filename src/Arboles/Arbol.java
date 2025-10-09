@@ -343,6 +343,15 @@ public void invertirArbol() {
         nodo.hijoDerecho = invertir(temp);
         return nodo;
     }
+    
+    
+    //Tarea copiar el meotodo de imprimir arbles que esta en la diapos o en mi correo 
+    
+    
+    
+    
+    
+    
 }
  
 
