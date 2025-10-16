@@ -1,9 +1,15 @@
 
 package Grafos;
 
+import Grafos.Grafos.*;
+
 import java.util.LinkedList;
+import java.util.Queue;
 
 public class Grafos_Lista_Adyacencia {
+    
+    // lista de lista es lo mismo que ista de adyacencia 
+    
     
     
     private LinkedList<Integer>[]adj;
@@ -38,5 +44,33 @@ public class Grafos_Lista_Adyacencia {
     }
     
     //mi clase grafo y mi clase lista adyacencia hacen lo mismo en un inicio solo son dos formas de implementar  los mismo 
+    
+     public void imprimirEnAnchura(int inicio){ //inici desde donde quiero arrancar a leer 
+       
+       
+           
+           Queue<Integer> cola = new LinkedList<> (); // hago una cola de nodos 
+           
+           boolean [] visitado = new boolean [V];//creo un boleano donde todos losdatos seran falsos 
+           visitado[inicio]= true;//hago que los datos sean verdaderos 
+           cola.offer(inicio);//agrego elementos a mi cola 
+           
+           while (!cola.isEmpty()){
+               int u = cola.poll();
+               System.out.println(u + " ");
+               
+               for(int v : adj[u]){
+                   if(!visitado[v]){
+                       visitado[v] = true;
+                       cola.offer(v);
+                   }
+               }
+           
+           
+    
+    
+}
+
+}
 }
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
