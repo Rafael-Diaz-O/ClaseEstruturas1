@@ -4,33 +4,33 @@ package Ordenamiento;
 
 public class Burbuja {
     
-   
-    
-    
-    public static void main(String[] args) {
-        
-        
-        
-         int [] numero = {12,3,56,24,86};
-         int []resultado = {} ; 
-         
+   public void burbuja(int[] vector){
+       int temp;
        
-       
-       for(int i=0; i < numero.length; i++){
-           
-           if(numero[i] < numero[i+1]){
-               resultado [i] = numero[i];
-           }else{
-               resultado[i]= numero[i+1];
+       for(int i = 0; i< vector.length - 1; i++){
+           for(int j = i+ 1; j< vector.length; j++){
+               if(vector[j] < vector[i]){
+                   temp =  vector[i];
+                   vector[i] = vector[j];
+                   vector[j] = temp;
+               }
            }
-           
-           
        }
+   }
+    
+   
+   public void imprimirVector(int [] vector){
+       for(int i= 0; i < vector.length; i++){
+       System.out.println(vector[i] + "");
+   }
        
-        System.out.println(resultado);
-        
-        
+       System.out.println();
+   }
+   
+   
+
     
     
-}
+    
+    
 }
