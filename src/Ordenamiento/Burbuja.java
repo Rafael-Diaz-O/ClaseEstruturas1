@@ -144,7 +144,30 @@ public void seleccion(int[] vector){
    }
    
    //metodo para conteo de numeros pequeños en un vector
-   
+   public void coutingSort(int[] vector){
+       
+       
+       for(int i = 0; i < vector.length; i ++){
+           
+           int temp = vector[i];
+           if(vector[i]< vector[i+1]){
+               
+           }
+       }
+       
+       
+       int[] aux = new int[vector.length];
+       
+       for(int i = 0; i< vector.length; i++){
+           aux[i] = i+1; 
+       }
+       
+       
+       
+       
+       
+       
+   }
    
    
     

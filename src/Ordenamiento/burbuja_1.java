@@ -10,7 +10,7 @@ class burbuja_1  {
         
     public static void main(String[] args) {
         
-        int[] vector = { 4,10,45,39,23,100,1,2};
+        int[] vector = { 4,3,2,2,1,6};
         System.out.println("vector Original");
         Burbuja o = new Burbuja();
        o.imprimirVector(vector);
@@ -29,6 +29,8 @@ class burbuja_1  {
 //        o.imprimirVector(vector);
 //        System.out.println("prueba");
 //    
+
+     o.coutingSort(vector);
 
 
         
