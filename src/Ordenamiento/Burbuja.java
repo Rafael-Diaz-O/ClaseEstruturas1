@@ -78,8 +78,16 @@ public void seleccion(int[] vector){
        for(int i = 1; i < vector.length; i++){
            int temp = vector[i];
            int hueco = i;
-           while (hueco )
+           while (hueco > 0 && vector[hueco-1] > temp){
+               vector[hueco] = vector[hueco-1];
+               hueco = hueco-1;
+           }
+           
+           vector[hueco] = temp; 
        }
+       
+       
+       
    }
     
     
