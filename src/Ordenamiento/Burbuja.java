@@ -24,7 +24,7 @@ public class Burbuja {
        System.out.print("{" + vector[i] + "}");
    }
        
-       System.out.println();
+       System.out.println("");
    }
    
    
@@ -89,6 +89,64 @@ public void seleccion(int[] vector){
        
        
    }
-    
+   
+//   public void shellSort(int[] vector){
+//       
+//       int gap = vector.length /2 ;
+//       
+//       for(int i =  0; i < vector.length; i++){
+//           
+//           int temp = vector[i];
+//           
+//           for(int e = 1 + gap ;e<vector.length; e++ ){
+//               
+//               if(temp > vector[e]){
+//                   int copia = vector[e];
+//                   temp = vector[e];
+//                   temp = copia; 
+//                   break;
+//               }
+//               
+//           }
+//           
+//           if(i == gap){
+//               break ; 
+//               }
+//           
+//       }
+       
+       
+       
+       
+       
+//   }
+   
+   public void shell(int[]vector){
+       int salto,temp;
+       salto = vector.length /2;
+       
+       while(salto>0){
+           for(int i = salto; i < vector.length;i++){
+               int j = i-salto;
+               while(j>=0){
+                   if(vector[j]>vector[j+salto]){
+                       temp= vector[j];
+                       vector[j]= vector[j+salto];
+                       vector[j+salto]=temp;
+                       j = j-salto;
+                   }else{
+                       j = -1;
+                   }
+               }
+           }
+           salto = salto/2; 
+       }
+   }
+   
+   //metodo para conteo de numeros pequeños en un vector
+   
+   
+   
     
 }
+
