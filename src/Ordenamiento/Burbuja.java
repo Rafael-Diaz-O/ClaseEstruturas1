@@ -182,6 +182,61 @@ public void seleccion(int[] vector){
    }
    
    
+   public void coutingSorRadix(int[] vector,int division){ //meter otor parametro que me idique y sefije en que posiciones se ejecuta el cauting
     
+       //el tamaño del vector aux simepre sera 10
+       
+       //cuenta cuantos de cada uno hay 
+       int[] aux = new int[10];
+       for(int i = 0; i < vector.length; i++){
+           aux[vector[i]]= aux[vector[i]]+1;
+       }
+       
+       //acumule el vector
+       for(int i = 1; i<aux.length; i++){
+           aux[i]= aux[i] + aux[i-1];
+           
+       }
+       
+       //Asigne en las nuevas posiciones
+       int[] salida = new int[vector.length];
+       for(int i = vector.length; i >= 0 ;i--){
+           int recorre = vector[i];
+           int new_pos = aux[recorre-min]-1;
+           salida[new_pos]= recorre;
+           aux[recorre - min]= aux[recorre-min]-1;
+           
+       }
+       
+       for(int i =0; i< vector.length; i ++){
+           vector[i]= salida[i];
+       }
+}
+   
+   //revisar codigo en casa 
+   
+   public void RadixSort(int[] vector ){
+       
+       
+       for(int i = 0; i < vector.length; i++){
+           int operacion = vector[i]/1;
+           int division = operacion % 10; //% significa modulo de 10 
+           
+            coutingSorRadix(vector,division);
+       }
+       
+       
+       
+       public int[] radixSort(int[]vector){
+           int max = Arrys.stream(vector).max().orelse(Integer.MAX_VALUE);
+           for(int exp = 1; max/exp > 0; exp*=10){
+               vector = countingSor4radixsort(vector,exp);
+           }
+       }
+       
+       return vector; 
+       
+   }
+    // erminar de adaptar el counting sort de modificarlo para que funcione 
 }
 

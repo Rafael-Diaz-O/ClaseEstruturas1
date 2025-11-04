@@ -29,11 +29,12 @@ class burbuja_1  {
 //        o.imprimirVector(vector);
 //        System.out.println("prueba");
 //    
+//
+//     o.coutingSort(vector);
+//     o.imprimirVector(vector);
 
-     o.coutingSort(vector);
+     o.RadixSort(vector);
      o.imprimirVector(vector);
-
-
         
         
 }
