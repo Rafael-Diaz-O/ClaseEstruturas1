@@ -31,6 +31,7 @@ class burbuja_1  {
 //    
 
      o.coutingSort(vector);
+     o.imprimirVector(vector);
 
 
         
