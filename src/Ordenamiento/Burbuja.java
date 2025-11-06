@@ -1,4 +1,4 @@
-
+ 
 package Ordenamiento;
 
 import java.util.Arrays;
@@ -238,5 +238,7 @@ public void seleccion(int[] vector){
        
    }
     // erminar de adaptar el counting sort de modificarlo para que funcione 
+
+//terminar codio ver captura del correo 
 }
 
