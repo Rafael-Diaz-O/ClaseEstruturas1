@@ -1,3 +1,2 @@
-Lista de pendientes
-1. Estudiar listas enlazadas simples
-2. Praticar el escribir codigo a papel 
+Toda la informacion sobre Estruturas de Datos se encunetra 
+en la rama de Rafa 
